@@ -1,1 +1,81 @@
-hola mundo!!
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="#inicio" onclick="openModal('inicio')">Inicio</a></li>
+                <li><a href="#nosotros" onclick="openModal('nosotros')">Nosotros</a></li>
+                <li><a href="#mision" onclick="openModal('mision')">Misión</a></li>
+                <li><a href="#vision" onclick="openModal('vision')">Visión</a></li>
+                <li><a href="#contacto" onclick="openModal('contacto')">Contacto</a></li>
+                <li><a href="#ubicacion" onclick="openModal('ubicacion')">Ubicación</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">×</span>
+            <div id="modal-text"></div>
+        </div>
+    </div>
+
+    <main>
+        <section id="inicio">
+            <h2>Bienvenido a nuestra página</h2>
+            <p>Esta es la página de inicio de nuestra empresa.</p>
+        </section>
+
+        <section id="nosotros">
+            <h2>Nosotros</h2>
+            <p>Somos una empresa dedicada a brindar soluciones innovadoras.</p>
+        </section>
+
+        <section id="mision">
+            <h2>Misión</h2>
+            <p>Nuestra misión es ofrecer productos y servicios de alta calidad.</p>
+        </section>
+
+        <section id="vision">
+            <h2>Visión</h2>
+            <p>Ser una empresa líder en innovación y tecnología.</p>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <form id="contactForm" action="contacto.php" method="POST">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <section id="ubicacion">
+            <h2>Ubicación</h2>
+            <p>Estamos ubicados en el centro de la ciudad, calle Ficticia 123.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Empresa</p>
+    </footer>
+</body>
+</html>
+
